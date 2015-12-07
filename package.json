@@ -1,0 +1,29 @@
+{
+  "name": "firebase-user-signup-demo",
+  "version": "1.0.0",
+  "description": "Firebase user signup demo",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talee/firebase-user-signup-demo.git"
+  },
+  "keywords": [
+    "firebase",
+    "user",
+    "signup",
+    "demo"
+  ],
+  "author": "Thomas Lee <tleehoc@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/talee/firebase-user-signup-demo/issues"
+  },
+  "homepage": "https://github.com/talee/firebase-user-signup-demo#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-html-autoprefixer": "0.0.1"
+  }
+}
