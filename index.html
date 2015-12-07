@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script async defer src='app.js'></script>
+    <style>
+      html {
+        height: 96vh;
+      }
+      body {
+        font: normal 24px 'HelveticaNeue', 'Droid Sans', Arial;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+      input {
+        background: none;
+        border: 1px solid black;
+        font-size: 1rem;
+        font: inherit;
+        margin: 0;
+        padding: .5rem;
+      }
+      input:focus {
+        border-color: #1976D2;
+      }
+      .flex {
+        display: flex;
+      }
+      .flex-grow {
+        flex-grow: 1;
+      }
+      input[type=submit] {
+        font-weight: bold;
+        font-size: calc(1em - 1px);
+        flex-grow: 1;
+        color: white;
+        background: #42A5F5;
+        border-radius: 4px;
+        border-color: #1976D2;
+        background-image: -webkit-linear-gradient(top,#42A5F5,#2196F3);
+      }
+      input[type=submit]:hover {
+        background: #2196F3;
+        background-image: -webkit-linear-gradient(top,#2196F3,#1E88E5);
+      }
+      #signup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #signupEmail {
+        margin: 0 0 1rem 0;
+      }
+      .email-container {
+        width: 400px;
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body class='flex'>
+    <form id='signup'>
+      <h2>Signup to know when we launch</h2>
+      <div class="email-container">
+        <input type='email' name='signupEmail' required id='signupEmail' placeholder='Email' class='flex-grow'>
+        <input type='submit' value='Join' class='flex-grow'>
+      </div>
+    </form>
+  </body>
+</html>
