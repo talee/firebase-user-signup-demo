@@ -9,14 +9,17 @@
         height: 96vh;
       }
       body {
-        font: normal 24px 'HelveticaNeue', 'Droid Sans', Arial;
+        font: normal 3rem 'HelveticaNeue', 'Droid Sans', Arial;
         height: 100%;
         align-items: center;
         justify-content: center;
       }
+      h2 {
+        font-size: 5rem;
+      }
       input {
         background: none;
-        border: 1px solid black;
+        border: 1px solid gray;
         font-size: 1rem;
         font: inherit;
         margin: 0;
@@ -55,18 +58,46 @@
         margin: 0 0 1rem 0;
       }
       .email-container {
-        width: 400px;
+        width: 70vw;
         display: flex;
         align-items: stretch;
         flex-direction: column;
+      }
+      /* Desktop */
+      @media only screen  and (min-width : 1024px) {
+        html {
+          font-size: 10px;
+        }
+        .email-container {
+          max-width: 50%;
+        }
+      }
+      /* iPhone 6 */
+      @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        body {
+          height: initial;
+        }
+        h2 {
+          font-size: 3rem;
+        }
+      }
+      /* iPhone 6+ */
+      @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+        body {
+          height: initial;
+        }
+        h2 {
+          font-size: 3rem;
+        }
       }
     </style>
   </head>
   <body class='flex'>
     <form id='signup'>
-      <h2>Signup to know when we launch</h2>
+      <h2>Keep me posted on the latest news</h2>
       <div class="email-container">
-        <input type='email' name='signupEmail' required id='signupEmail' placeholder='Email' class='flex-grow'>
+        <input type='email' name='signupEmail' required id='signupEmail'
+        placeholder='Enter your email' class='flex-grow'>
         <input type='submit' value='Join' class='flex-grow'>
       </div>
     </form>
