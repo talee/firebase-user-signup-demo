@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Firebase User Signup Demo</title>
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script async defer src="src/app.js"></script>
+    <style>
+      html {
+        height: 96vh;
+      }
+      body {
+        font: normal 3rem 'HelveticaNeue', 'Droid Sans', Arial;
+        height: 100%;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+      }
+      h2 {
+        font-size: 5rem;
+      }
+      input {
+        background: none;
+        border: 1px solid gray;
+        font-size: 1rem;
+        font: inherit;
+        margin: 0;
+        padding: 2rem;
+      }
+      input:focus {
+        border-color: #1976D2;
+      }
+      .flex {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+      }
+      .flex-grow {
+        -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+      }
+      input[type=submit] {
+        padding: 1rem;
+        font-weight: bold;
+        font-size: calc(1em - 1px);
+        -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+        color: white;
+        background: #42A5F5;
+        border-radius: 4px;
+        border-color: #1976D2;
+      }
+      input[type=submit]:hover {
+        background: #2196F3;
+      }
+      #signup {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+      #signupEmail {
+        margin: 0 0 1rem 0;
+      }
+      .email-container {
+        width: 70vw;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+      }
+      /* Desktop */
+      @media only screen  and (min-width : 1024px) {
+        html {
+          font-size: 10px;
+        }
+        .email-container {
+          max-width: 50%;
+        }
+      }
+      /* iPhone 6 */
+      @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        body {
+          height: initial;
+        }
+        h2 {
+          font-size: 3rem;
+        }
+      }
+      /* iPhone 6+ */
+      @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+        body {
+          height: initial;
+        }
+        h2 {
+          font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <form id="signup">
+      <h2>Keep me posted on the latest news</h2>
+      <div class="email-container">
+        <input type="email" name="signupEmail" required id="signupEmail" placeholder="Enter your email" class="flex-grow">
+        <input type="submit" value="Join" class="flex-grow">
+      </div>
+    </form>
+  </body>
+</html>
